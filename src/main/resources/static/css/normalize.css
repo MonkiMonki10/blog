@@ -1,0 +1,25 @@
+html, body, header, footer, li, ul, button, 
+p, h1, h2, h3, h4, h5, h6, a, span, main, section, article{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 100%;
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+body{
+	background: #ddd;
+}
+
+::selection {
+  color: #ddd;
+  background: #35b726;
+}
+::-moz-selection {
+  color: #ddd;
+  background: #35b726;
+}

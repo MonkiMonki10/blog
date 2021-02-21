@@ -1,0 +1,13 @@
+<!DOCTYPE HTML5>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title th:text="${title}"></title> 
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <link th:href="@{/css/normalize.css}" rel="stylesheet" />
+	    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+	</head>
+	<body>
+		<header th:replace="blocks/header :: header"></header>
+	    <p th:text="'Hello, ' + ${title} + '!'" />
+	</body>
+</html>

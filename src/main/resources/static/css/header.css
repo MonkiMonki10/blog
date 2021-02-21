@@ -1,0 +1,43 @@
+header{
+	padding: 0 15rem;
+	background: rgba(25, 25, 25, 255);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	box-shadow: 0 0 5px 2px #222;
+	z-index: 10;
+}
+
+header h1 a{
+	font-size: 175%;
+	color: #ddd;
+}
+
+header h1 a span{
+	color: #35b726;
+}
+
+header nav ul{
+	display: flex;
+}
+
+header nav ul li a{
+	margin-left: 2rem;
+	color: #ddd;
+	transition: color .4s;
+}
+
+header nav ul li a:hover{
+	color: #9ad857;
+}
+
+@media only screen and (max-width: 780px) {
+	header {
+		padding: 0 1rem;
+	}
+}

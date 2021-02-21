@@ -1,0 +1,52 @@
+main{
+	display: flex;
+	justify-content: center;
+	color: #444;
+}
+
+main div{
+	margin-top: 48px;
+	padding: 2rem 0;
+	width: 80%;
+}
+
+.heading{
+	width: 100%;
+	display: flex;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #9999;
+	margin-bottom: 2rem;
+}
+
+.edit{
+	margin: 0;
+	padding: 0;
+	width: fit-content;
+	display: flex;
+}
+
+.edit a{
+	color: #35b726;
+}
+
+.edit a:hover, .edit button:hover{
+	color: #9ad857;
+}
+
+.edit button{
+	background: none;
+	border:none;
+	color: #d45a7b;
+	margin-left: 1rem;	
+}
+
+main div h1{
+	font-size:200%;
+}
+
+.main_content{
+	margin-bottom: 2rem;
+}

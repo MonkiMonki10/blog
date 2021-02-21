@@ -1,0 +1,30 @@
+<!DOCTYPE HTML5>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title th:text="${title}"></title> 
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/normalize.css}" rel="stylesheet" />
+	    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+	    <link th:href="@{/css/blog.css}" rel="stylesheet"/>
+	</head>
+	<body>
+		<header th:replace="blocks/header :: header"></header>
+		<main>
+			<section>
+				<div th:each="el : ${posts}" th:class="cards">
+					<article>
+						<h3 th:text="${el.title}"></h3>
+						<p th:text="${el.preview}"></p>
+						<a th:href="'blog/' + ${el.id}" th:class="read_more_button">></a>
+						<div th:class="read_more_undercolor"></div>
+						<div th:class="read_more_label"><span>Read more</span></div>
+					</article>
+				</div>
+			</section>
+		</main>
+		<ul class="tools">
+			<li><a class="createPost" href="/blog/create">+</a></li>
+		</ul>
+		<script type="text/javascript" th:src="@{js/Cardbutton.js}"></script>
+	</body>
+</html>

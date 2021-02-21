@@ -1,0 +1,28 @@
+<!DOCTYPE HTML5>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title th:text="${title}"></title> 
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/normalize.css}" rel="stylesheet" />
+	    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+	    <link th:href="@{/css/create.css}" rel="stylesheet"/>
+	</head>
+	<body>
+		<header th:replace="blocks/header :: header"></header>
+		<main>
+			<div>
+				<h1>Create a post and <span>smile</span> :D</h1>
+				<form action="/blog/create" method="post">
+					<input type="text" name="title" placeholder="What is the title of this interesting post?">
+					<input type="text" name="preview" placeholder="I can set any placeholder I want because no friends to flex my work :/">
+					<textarea name="content" placeholder="What is the title of this interesting post?"></textarea>
+					<button type="submit">Push it in!</button>
+				</form>
+			</div>
+		</main>
+		<ul class="tools">
+			<li><a class="createPost" href="/blog/create">+</a></li>
+		</ul>
+		<script type="text/javascript" th:src="@{js/Cardbutton.js}"></script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML5>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title th:text="${title}"></title> 
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/normalize.css}" rel="stylesheet" />
+	    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+	    <link th:href="@{/css/header.css}" rel="stylesheet"/>
+	    <link th:href="@{/css/details.css}" rel="stylesheet"/>
+	    <link th:href="@{/css/blog.css}" rel="stylesheet"/>
+	</head>
+	<body>
+		<header th:replace="blocks/header :: header"></header>
+		<main>
+			<div th:each="el : ${posts}">
+				<div class="heading">
+					<h1 th:text="${el.title}"></h1>
+					<div class="edit">
+						<a th:href="'/blog/' + ${el.id} + '/edit'">Edit</a>
+						<form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
+							<button type="submit">Delete</button>
+						</form>
+					</div>
+				</div>
+				<p th:class="main_content" th:text="${el.text}"></p>
+				<p>Views: <span th:text="${el.views}"></span></p>
+			</div>
+		</main>
+		<ul class="tools">
+			<li><a class="createPost" href="/blog/create">+</a></li>
+		</ul>
+	</body>
+</html>
